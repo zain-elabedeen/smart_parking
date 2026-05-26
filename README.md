@@ -1,6 +1,6 @@
 # smart_parking
 
-Edge computer-vision prototype for a parking entrance/exit camera. The app reads a video source, detects and tracks vehicles, detects license plates inside vehicle crops, keeps the best plate crop per track, estimates entry/exit direction, and writes durable `PlateCropDetected` events locally before optional Kafka publishing.
+Edge computer-vision pipeline for parking camera. The app reads a video source, detects and tracks vehicles, detects license plates inside vehicle crops, keeps the best plate crop per track, estimates entry/exit direction, and writes durable `PlateCropDetected` events locally before optional Kafka publishing.
 
 This project is designed as a Senior Software Engineer interview demo: small enough to run locally, but structured around the same boundaries an edge production system would need.
 
