@@ -79,7 +79,7 @@ python scripts/setup_models.py --config config.yaml --skip-plate
 
 Large runtime artifacts are intentionally ignored by Git: model weights, demo videos, crop images, SQLite data, caches, and bytecode.
 
-## Running The Demo
+## Run
 
 Put videos under `edge/demo_videos/`, then run from `edge/`:
 
