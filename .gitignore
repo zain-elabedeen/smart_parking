@@ -1,0 +1,12 @@
+.DS_Store
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+
+edge/data/
+edge/demo_videos/
+edge/models/*.pt
+edge/models/*.onnx
+edge/models/*.engine
+

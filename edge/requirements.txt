@@ -1,0 +1,13 @@
+confluent-kafka>=2.4.0
+fastapi>=0.111.0
+numpy>=1.26.0
+opencv-python-headless>=4.9.0
+prometheus-client>=0.20.0
+pydantic>=2.7.0
+pytest>=8.2.0
+PyYAML>=6.0.1
+supervision>=0.24.0,<0.28.0
+torch==2.5.1
+torchvision==0.20.1
+ultralytics>=8.2.0
+uvicorn>=0.30.0

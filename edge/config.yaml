@@ -1,0 +1,67 @@
+site:
+  site_id: berlin-demo-site
+  edge_device_id: edge-node-1
+
+camera:
+  camera_id: entry-camera-1
+  source: demo_videos/entry.mp4
+  width: 1920
+  height: 1080
+
+frame_sampling:
+  target_fps: 15
+  adaptive: true
+  min_fps: 2
+  max_fps: 15
+
+vehicle_detector:
+  model_path: models/yolov8s.pt
+  model_url: null
+  confidence_threshold: 0.45
+  classes:
+    - car
+    - truck
+    - bus
+    - motorcycle
+
+plate_detector:
+  model_path: models/license_plate_detector.pt
+  model_url: https://huggingface.co/Koushim/yolov8-license-plate-detection/resolve/main/best.pt
+  confidence_threshold: 0.40
+
+tracker:
+  lost_timeout_seconds: 2.0
+  min_track_duration_seconds: 0.5
+  track_activation_threshold: 0.25
+  minimum_matching_threshold: 0.8
+  minimum_consecutive_frames: 1
+
+direction:
+  mode: line_crossing
+  line:
+    start: [100, 500]
+    end: [1800, 500]
+  entry_direction: top_to_bottom
+
+kafka:
+  bootstrap_servers: localhost:9092
+  topic_plate_crops: plate-crops
+
+local_queue:
+  sqlite_path: data/outbound_events.db
+
+object_storage:
+  mode: local
+  local_path: data/crops
+
+processing:
+  min_plate_track_displacement_px: 20.0
+  plate_detection_classes:
+    - car
+    - truck
+    - bus
+  frame_log_interval: 10
+
+metrics:
+  host: 0.0.0.0
+  port: 9101
