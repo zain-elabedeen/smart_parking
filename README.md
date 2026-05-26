@@ -1,8 +1,6 @@
 # smart_parking
 
-Edge computer-vision pipeline for parking camera. The app reads a video source, detects and tracks vehicles, detects license plates inside vehicle crops, keeps the best plate crop per track, estimates entry/exit direction, and writes durable `PlateCropDetected` events locally before optional Kafka publishing.
-
-This project is designed as a Senior Software Engineer interview demo: small enough to run locally, but structured around the same boundaries an edge production system would need.
+Edge computer-vision pipeline for parking camera. The app reads a video source, detects and tracks vehicles, detects and crops vehicle license plates, keeps the best plate crop per vehicle tracked, estimates entry/exit direction, and writes durable `PlateCropDetected` events locally before optional Kafka publishing.
 
 ## What Is Included
 
